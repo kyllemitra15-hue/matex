@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .logo-text {
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://placehold.co/1920x1080');
+            background-image: url("img/matexph.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 65vh; /* Full height of the viewport */
+            display: auto;
+            align-items: center; /* Center content vertically */
+            justify-content: center; /* Center content horizontally */
+            color: white;
+        }
+        * {box-sizing:border-box}
+
+        .service-card {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary {
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .section {
+            scroll-margin-top: 80px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="w-13 h-12 rounded-full flex items-center justify-center mr-3">
+                        <a href="index.html" class="w-full h-full object-cover rounded-full"><img src="img\logo.png" alt="MATEX Logo" class="w-full h-full object-cover rounded-full" /></a>
+                    </div>
+                    <a href="index.html" class="text-2xl font-bold text-gray-800 logo-text"><span class="text-green-700">PHILIPPINES</span> </a>
+                </div>
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-10">
+                    <a href="index.html" class="text-gray-600 hover:text-green-700 font-medium">Home</a>                   
+                    <a href="products.html" class="block py-2 text-gray-700 hover:text-green-700">Products</a>                 
+                    <a href="offices.html" class="text-gray-600 hover:text-green-700 font-medium">Our Offices</a> <!-- Link to offices.html -->
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button class="mobile-menu-button p-2 rounded-md text-gray-700 hover:text-green-700 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>  
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Navigation -->
+            <div class="mobile-menu hidden md:hidden">
+                <a href="index.html" class="block py-2 text-gray-700 hover:text-green-700">Home</a>
+                <a href="products.html" class="block py-2 text-gray-700 hover:text-green-700">Products</a>
+                <a href="offices.html" class="block py-2 text-gray-700 hover:text-green-700">Our Offices</a> <!-- Link to offices.html -->                         
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero py-32 text-white section">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">Our <span class="text-green-700">Products</span></h1>
+            <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto">Explore our range of high-quality industrial products designed to meet your needs.</p>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-20 bg-gray-100 section">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product Card 1 -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-lg hover:shadow-xl">
+                    <div class="w-300 h-300 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                        <img src="https://www.matex-japan.com/e/img/products/transmission/002.jpg" alt="CVT" />
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">CVT (Continuously Variable Transmission)</h3>
+                    <p class="text-gray-600">It is a single stage transmission applying differential planetary mechanism. By using this, the range which motor works efficiently 
+                        can expand.</p></div>
+                
+                <!-- Product Card 2 -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-lg hover:shadow-xl">
+                    <div class="w-300 h-300 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                        <img src="https://www.matex-japan.com/e/img/products/clp/001.jpg" alt="Easy Clamp" />
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Easy Clamp</h3>
+                    <p class="text-gray-600">The clamp body can be attached or removed simply by loosening the bolt; there’s no need to remove it completely. Even when switching to molds of different thicknesses, the replacement process is quick and seamless, allowing for significant productivity improvements.</p>
+                </div>
+                
+                <!-- Product Card 3 -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-lg hover:shadow-xl">
+                    <div class="w-300 h-300 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                    <img src="https://www.matex-japan.com/e/img/products/transmission/001.jpg" alt="2-Stages Transmission" />
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">2-Stages Transmission</h3>
+                    <p class="text-gray-600">It changes the speed in two ways, one reduction ratio is 1:1 (directly connected to input), the other reduction ratio is 6:1 (reduction by planetary gear mechanism).</p>
+                </div>
+
+                <!-- Product Card 4 -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-lg hover:shadow-xl">
+                    <div class="w-300 h-300 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                        <img src="https://www.matex-japan.com/e/img/products/airdamper/001.jpg" alt="Matex Air-Damper" />
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Matex Air-Damper</h3>
+                    <p class="text-gray-600">is an air-controlled door closer. It is designed for sliding doors, providing smooth opening and closing.
+                    The air pressure can be easily adjusted using the manual adjustment screw, and it features lightweight construction with plastic parts.</p>
+                </div>
+                <!-- Product Card 5 -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-lg hover:shadow-xl">
+                    <div class="w-300 h-300 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                        <img src="https://www.matex-japan.com/e/img/products/new/003.jpg" alt="Planetary Gear" />
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Planetary Gear (Toschtec Reducer)</h3>
+                    <p class="text-gray-600">
+                    we developed new cycloidal reducer named "TOSCHTEC REDUCER (type-c)". 
+                    We adopted cycloid system in it to achieve smaller in size and higher reduction ratio with the same thickness as conventional gear reducers..</p>
+                </div>
+                 <!-- Product Card 6 -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-lg hover:shadow-xl">
+                    <div class="w-300 h-300 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                        <img src="https://www.matex-japan.com/e/img/processing/injectionmolding/002.jpg" alt="Plastic Injection Mold" />
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Plastic Injection Molding</h3>
+                    <p class="text-gray-600">
+                   At our injection molding dept., we receive order of designing various high-precision injection molding products, designing metal mold and mass producing in all the three factories in Japan, in the Philippines, and in China. 
+                   Also, we support assembling parts and response customers needs. Our lighter and less-cost products using plastic instead of machined or metal components have been evaluating.</p>
+                </div>
+                 <!-- Product Card 7 -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-lg hover:shadow-xl">
+                    <div class="w-300 h-300 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                        <img src="https://www.matex-japan.com/e/img/processing/injectionmolding/003.jpg" alt="Planetary Gear" />
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Sample Product of Plastic Injection Molding</h3>
+                    <p class="text-gray-600"></p>
+                </div>
+                <!-- Product Card 8 -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-lg hover:shadow-xl">
+                    <div class="w-300 h-300 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                        <img src="https://www.matex-japan.com/e/img/processing/injectionmolding/001.jpg" alt="Planetary Gear" />
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Sample Product of Plastic Injection Molding</h3>
+                    <p class="text-gray-600"></p>
+                </div>
+                 <!-- Product Card 9 -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-lg hover:shadow-xl">
+                    <div class="w-300 h-300 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                        <img src="https://www.matex-japan.com/e/img/processing/injectionmolding/004.jpg" alt="Planetary Gear" />
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Sample Product of Plastic Injection Molding</h3>
+                    <p class="text-gray-600"></p>
+                </div>
+                 <!-- Product Card 10 -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-lg hover:shadow-xl">
+                    <div class="w-300 h-300 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                        <img src="https://www.matex-japan.com/e/img/processing/metal/014.jpg" alt="Planetary Gear" />
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Sample Product of Planetary Gear for Servomotor</h3>
+                    <p class="text-gray-600"></p>
+                </div>
+                <!-- Product Card 11 -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-lg hover:shadow-xl">
+                    <div class="w-300 h-300 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                        <img src="https://www.matex-japan.com/e/img/processing/metal/013.jpg" alt="Planetary Gear" />
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Sample Product of Press, die-casting, forging products</h3>
+                    <p class="text-gray-600"></p>
+                </div>
+                <!-- Product Card 12 -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-lg hover:shadow-xl">
+                    <div class="w-300 h-300 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                        <img src="https://www.matex-japan.com/e/img/processing/metal/012.jpg" alt="Planetary Gear" />
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Sample Product of Cutting, rolling products</h3>
+                    <p class="text-gray-600"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Precision Gear Section -->
+   <section id="services" class="py-20 bg-white section">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-800">Precision Gear Processing Products</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Comprehensive metal products to meet your high-standard and quality expectation with precision and efficiency.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div class="service-card bg-white p-8 rounded-xl shadow-lg hover:shadow-xl">
+                    <div class="w-300 h-300 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                        <img src="https://www.matex-japan.com/e/img/processing/metal/003.jpg" alt="Planetary Gear" />
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Gear with step</h3>
+                    <p class="text-gray-600"></p>One of a set of toothed wheels that work together to alter the relation between the speed of a driving mechanism</div>
+
+                    <div class="service-card bg-white p-8 rounded-xl shadow-lg hover:shadow-xl">
+                    <div class="w-300 h-300 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                        <img src="https://www.matex-japan.com/e/img/processing/metal/004.jpg" alt="Planetary Gear" />
+                    </div>
+                    
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Gear cutting shaft</h3>
+                    <p class="text-gray-600"></p>Gear cutting is the process of shaping gear teeth using tools like hobs, shapers, or mills to ensure accurate power transmission.</div>
+                     <div class="service-card bg-white p-8 rounded-xl shadow-lg hover:shadow-xl">
+                    <div class="w-300 h-300 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                        <img src="https://www.matex-japan.com/e/img/processing/metal/005.jpg" alt="Planetary Gear" />
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Helical input shaft</h3>
+                    <p class="text-gray-600">A helical input shaft refers to a component in a helical gearbox that transmits power and torque from one shaft to another. </p>
+                </div>
+                </div>
+                </div>
+                </section>
+                <!-- Precision Metal Section -->
+   <section id="services" class="py-20 bg-white section">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-800">PRECISION METAL CUTTING PROCESSING</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Comprehensive metal cutting products to meet your high-standard and quality expectation with precision and efficiency.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div class="service-card bg-white p-8 rounded-xl shadow-lg hover:shadow-xl">
+                    <div class="w-300 h-300 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                        <img src="https://www.matex-japan.com/e/img/processing/metal/006.jpg" alt="Planetary Gear" />
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Shaft with screw hole </h3>
+                    <p class="text-gray-600"></p></div>
+
+                    <div class="service-card bg-white p-8 rounded-xl shadow-lg hover:shadow-xl">
+                    <div class="w-300 h-300 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                        <img src="https://www.matex-japan.com/e/img/processing/metal/007.jpg" alt="Planetary Gear" />
+                    </div>
+                    
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Coupling shaft</h3>
+                    <p class="text-gray-600"></p></div>
+                     <div class="service-card bg-white p-8 rounded-xl shadow-lg hover:shadow-xl">
+                    <div class="w-300 h-300 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                        <img src="https://www.matex-japan.com/e/img/processing/metal/008.jpg" alt="Planetary Gear" />
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Camshaft</h3>
+                    <p class="text-gray-600"></p>
+                </div>
+                </div>
+                </div>
+                </section>
+                   <!-- Precision Metal Section -->
+   <section id="services" class="py-20 bg-white section">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-800">OTHER METAL PROCESSING PRODUCTS</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">We offer various parts with different processing methods such as sintering, die-casting, cold forging, rolling, press. 
+                    Some processing is done in-house and some with the cooperation of our partners domestic or overseas.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div class="service-card bg-white p-8 rounded-xl shadow-lg hover:shadow-xl">
+                    <div class="w-300 h-300 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                        <img src="https://www.matex-japan.com/e/img/processing/metal/009.jpg" alt="Planetary Gear" />
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800"></h3>
+                    <p class="text-gray-600"></p></div>
+
+                    <div class="service-card bg-white p-8 rounded-xl shadow-lg hover:shadow-xl">
+                    <div class="w-300 h-300 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                        <img src="https://www.matex-japan.com/e/img/processing/metal/010.jpg" alt="Planetary Gear" />
+                    </div>
+                    
+                    <h3 class="text-xl font-bold mb-3 text-gray-800"></h3>
+                    <p class="text-gray-600"></p></div>
+                     <div class="service-card bg-white p-8 rounded-xl shadow-lg hover:shadow-xl">
+                    <div class="w-300 h-300 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                        <img src="https://www.matex-japan.com/e/img/processing/metal/011.jpg" alt="Planetary Gear" />
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800"></h3>
+                    <p class="text-gray-600"></p>
+                </div>
+                </div>
+                </div>
+                </section>
+
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div>
+                    <h3 class="text-xl font-bold mb-6">MATEX PHILIPPINES</h3>
+                    <p class="text-gray-400">Your trusted partner for industrial materials and solutions in the Philippines since 1997.</p>
+                    <div class="flex mt-6 space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"></path></svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"></path></svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path></svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white">Services</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white">About</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white">Contact</a></li>
+                        <li><a href="#company" class="text-gray-400 hover:text-white">Company Overview</a></li>
+                        <li><a href="offices.html" class="text-gray-400 hover:text-white">Offices</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Our Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Industrial Supplies</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Planetary Gear</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Mold & Die</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Equipment Maintenance</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Quality Assurance</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Training Programs</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Our Products</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#products" class="text-gray-400 hover:text-white">CVT</a></li>
+                        <li><a href="#products" class="text-gray-400 hover:text-white">Easy Clamp</a></li>
+                        <li><a href="#products" class="text-gray-400 hover:text-white">2-Stages Transimission</a></li>
+               
+                    </ul>
+                </div>
+                
+                  <!-- Newsletter text -->
+      <div class="mb-4 md:mb-0">
+        <h3 class="text-lg font-semibold">Subscribe to our Newsletter</h3>
+        <p class="text-gray-400 text-sm">Get the latest updates right in your inbox.</p>
+      </div>
+
+      <!-- Newsletter form -->
+      <form action="subscribe.php" method="POST" class="flex">
+        <input 
+          type="email" 
+          name="email" 
+          placeholder="Enter your email" 
+          required 
+          class="px-4 py-2 rounded-l-lg focus:outline-none text-black"
+        >
+        <button 
+          type="submit" 
+          name="subscribe"
+          class="bg-green-700 hover:bg-green-800 text-white px-5 py-2 rounded-r-lg">
+          Subscribe
+        </button>
+      </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 MATEX PHILIPPINES. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+  
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        </script>
+        <!-- SweetAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    let formData = new FormData(this);
+    
+    fetch('submit.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(res => res.text())
+    .then(data => {
+        if (data.trim() === "success") {
+            Swal.fire({
+                icon: 'success',
+                title: 'Message Sent!',
+                text: 'We will get back to you soon.'
+            });
+            this.reset();
+        } else {
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'There was a problem sending your message.'
+            });
+        }
+    })
+    .catch(() => {
+        Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'Network problem. Please try again.'
+        });
+    });
+});
+</script>
+
+</body>
+</html>
+</body>
+</html>
